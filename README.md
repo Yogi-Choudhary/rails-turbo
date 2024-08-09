@@ -33,3 +33,4 @@ Things you may want to cover:
 
 * Run command in terminal **rails g scaffold user name email city state country contcat_number**
 
+* Run command in terminal **rails g stimulus user_modal**
