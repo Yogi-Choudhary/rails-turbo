@@ -16,19 +16,7 @@
   </thead>
   <tbody>
     <%@users.each do |user|%>
-      <tr id="user-row_<%=user.id%>">
-        <td><%=user.name%></td>
-        <td><%=user.email%></td>
-        <td><%=user.city%></td>
-        <td><%=user.state%></td>
-        <td><%=user.country%></td>
-        <td><%=user.contcat_number%></td>
-        <td>
-          <%= link_to "View", user, class: "btn btn-info"%>
-          <%= link_to "Edit", edit_user_path(user), class: "btn btn-success"%>
-          <%= link_to "View", user, method: :delete, data: {confirm: 'Are you sure you want to delete this user?'},class: "btn btn-danger"%>
-        </td>
-      </tr>
+      <%= render "user", user: user%>
     <%end%>
   </tbody>
 </table>
